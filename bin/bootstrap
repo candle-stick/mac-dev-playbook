@@ -1,0 +1,5 @@
+#!/bin/sh
+xcode-select --install
+sudo xcodebuild -license
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ansible-playbook -i "localhost," -c local default.config.yml --ask-become-pass
